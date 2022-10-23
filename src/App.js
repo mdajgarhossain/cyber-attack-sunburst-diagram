@@ -1,5 +1,6 @@
 import './App.css';
 import Sunburst from 'sunburst-chart';
+import * as d3 from "d3";
 import { useEffect, useRef } from 'react';
 
 function App() {
@@ -80,11 +81,12 @@ function App() {
   }
 
   const myChart = Sunburst();
-  myChart.color
+  const color = d3.scaleOrdinal(d3.schemeAccent);
 
   useEffect(() => {
    data && myChart
     .data(data)
+    .color((d, parent) => color(parent ? parent.data.name : null))
     (ref.current).width(500).height(500)
   }, [data])
 
