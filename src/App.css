@@ -13,6 +13,10 @@
   }
 } */
 
+.headline {
+  margin-bottom: 42px;
+}
+
 .App-header {
   /* background-color: #282c34; */
   /* min-height: 100vh; */
@@ -22,6 +26,10 @@
   justify-content: center;
   /* font-size: calc(10px + 2vmin); */
   /* color: white; */
+}
+
+.App-header .sunburst-viz:first-child {
+  display: none;
 }
 
 /* .App-link {
