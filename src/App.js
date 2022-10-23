@@ -95,7 +95,7 @@ function App() {
   return (
     <div className="App">
       <div className='headline'>
-        <h1>Enterprise Matrix</h1>
+        <h1>MITRE ATT&CK</h1>
         <h4>Below are the tactics and techniques representing the MITRE ATT&CK by sunburst diagram.</h4>
       </div>
       <header className="App-header" ref={ref}>
