@@ -4,23 +4,75 @@ import { useEffect, useRef } from 'react';
 
 function App() {
   const ref = useRef()
+  // const data = {
+  //   name: "root",
+  //   children: [
+  //     {
+  //       name: "leafA",
+  //       value: 3
+  //     },
+  //     {
+  //       name: "nodeB",
+  //       children: [
+  //         {
+  //           name: "leafBA",
+  //           value: 5
+  //         },
+  //         {
+  //           name: "leafBB",
+  //           value: 1
+  //         }
+  //       ]
+  //     }
+  //   ]
+  // }
+
   const data = {
-    name: "root",
+    name: "ATT&CK TREE",
     children: [
       {
-        name: "leafA",
-        value: 3
-      },
-      {
-        name: "nodeB",
+        name: "Reconnaissance",
         children: [
           {
-            name: "leafBA",
-            value: 5
+            name: "Active Scanning",
+            children: [
+              {
+                name: "Scanning IP Blocks",
+                value: 2
+              },
+              {
+                name: "Vulnerability Scanning",
+                value: 2
+              },
+              {
+                name: "Wordlist Scanning",
+                value: 2              }
+            ],
           },
           {
-            name: "leafBB",
-            value: 1
+            name: "Gather Victim Host Information",
+            children: [
+              {
+                name: "Hardware",
+                value: 2,
+              },
+              {
+                name: "Software",
+                value: 2
+              },
+              {
+                name: "Firmware",
+                value: 2
+              },
+              {
+                name: "Client Configurations",
+                value: 2
+              }
+            ]
+          },
+          {
+            name: "Search Victim-Owned Websites",
+            value: 2,
           }
         ]
       }
@@ -28,6 +80,7 @@ function App() {
   }
 
   const myChart = Sunburst();
+  myChart.color
 
   useEffect(() => {
    data && myChart
