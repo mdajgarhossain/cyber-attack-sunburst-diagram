@@ -32,7 +32,7 @@ function App() {
   useEffect(() => {
    data && myChart
     .data(data)
-    (ref.current)
+    (ref.current).width(500).height(500)
   }, [data])
 
   console.log("ref", ref);
