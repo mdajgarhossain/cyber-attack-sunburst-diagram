@@ -28,6 +28,7 @@
   /* color: white; */
 }
 
+/* Commented the below codes during deployment */
 .App-header .sunburst-viz:first-child {
   display: none;
 }
